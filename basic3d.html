@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Ray Casting | 3D Projection
+        </title>
+
+		<link href='assets/css/font-awesome.min.css' rel='stylesheet' />
+		<link href="assets/css/bootstrap.css" rel="stylesheet"> 
+        <link href="assets/style/style.css" rel="stylesheet"> 
+        
+        <style>
+            #canvas {
+                border: 2px Solid Black;
+            }
+            #canvas3d {
+                border: 2px Solid Black;
+            }
+        </style>
+    </head>
+    <body>
+		<div class="content">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1" >
+                    <h3 class="text text-primary">Ray casting, Basic 3D projection - afmika</h3>
+                    <canvas id="canvas" width="425" height="425"></canvas>
+                    <canvas id="canvas3d" width="650" height="425"></canvas>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <b>Controls</b>
+                    <p>
+                        [Mouse mode]
+                        <b> MOUSE </b> : Move the camera | 
+                        <b> UP/DOWN </b> : Rotate the camera
+                    </p>
+                    <p>
+                        [Normal mode]
+                        <b> W, S, A, D  </b> : Move the player
+                    </p>
+                </div>
+            </div>
+
+        </div>
+		<script src="assets/js/jquery.min.js"  type="text/javascript"></script> 
+        <script src="assets/js/bootstrap.min.js"  type="text/javascript"></script> 
+
+        <script type="text/javascript" src="classes/Vec2D.js"></script>
+        <script type="text/javascript" src="classes/Vec3D.js"></script>
+        <script type="text/javascript" src="classes/MathTools.js"></script>
+        <script type="text/javascript" src="classes/Segment2D.js"></script>
+        <script type="text/javascript" src="classes/Rectangle2D.js"></script>
+        <script type="text/javascript" src="classes/Polygon2D.js"></script>
+        <script type="text/javascript" src="classes/Ray.js"></script>
+        <script type="text/javascript" src="classes/Light.js"></script>
+        <script type="text/javascript" src="classes/Scene.js"></script>
+
+        <script type="text/javascript" src="scripts/Utils.js"></script>
+        <script type="text/javascript" src="scripts/basic3d.js"></script>
+    </body>
+</html>
