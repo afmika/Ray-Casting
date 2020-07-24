@@ -7,9 +7,9 @@ const height = canvas.height;
 const alpha  = 0.5;
 const fps    = 24;
 let MousePos = null;
-let fov      = Math.PI / 6;
+let fov      = Math.PI / 8;
 
-const light_source = new Light(new Vec2D(50, 50), fov, 120);
+const light_source = new Light(new Vec2D(50, 50), fov, 100);
 const scene = new Scene();
 scene.create([
     // borders
@@ -50,7 +50,9 @@ function projectOn3DScreen( intersects ) {
     let dim = canvas3d.width / intersects.length;
     for (let i = 0; i < intersects.length; i++) {
         const cur_point = intersects[i];
-        let dist   = MathTools.dist( light_source.origin, cur_point );
+        let dist  = MathTools.dist( light_source.origin, cur_point );
+            dist *= Math.cos( light_source.fov / 2 ); // projecting on the current dir
+        // alert( dist + " VS "+ (dist / Math.cos( light_source.fov / 2 )));
         let scale  = dist / max_dist;
         let height = canvas3d.height - canvas3d.height * scale;
         if ( cur_point.from ) {
